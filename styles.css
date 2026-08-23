@@ -171,3 +171,124 @@ button { font:inherit; }
   *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
   .js-enhanced .reveal { opacity:1; transform:none; }
 }
+
+/* Readable typography across the complete editorial portfolio. */
+body { font-size:16px; line-height:1.55; }
+.masthead-brand>span:last-child,.masthead-contact { font-size:11px; }
+.navigation { gap:clamp(14px,1.9vw,26px); }
+.navigation a { font-size:14px; }
+.cover-top,.cover-status,.cover-scroll { font-size:11px; }
+.cover-caption>span,.cover-caption>h1,.cover-caption>p { font-size:12px; line-height:1.6; }
+.cover-side-right>span:last-child { font-size:11px; line-height:1.65; }
+.chapter-label { min-height:51px; gap:14px; font-size:12px; }
+.manifesto-title>span,.manifesto-copy>span { font-size:12px; }
+.manifesto-copy>p { font-size:17px; line-height:1.9; }
+.education-notes strong,.education-notes span { font-size:12px; line-height:1.65; }
+.impact-item>span { font-size:11px; line-height:1.65; }
+.section-heading>p,.project-section-foot>p,.research-intro>p,.disciplines-heading>p { font-size:15px; line-height:1.8; }
+.experience-entry { padding-block:30px; }
+.experience-meta>span { font-size:11px; line-height:1.55; }
+.experience-main h3 { font-size:21px; }
+.experience-company { margin-top:7px; font-size:14px; }
+.experience-main>p,.project-story>p,.research-entry p,.discipline>p { font-size:15px; line-height:1.8; }
+.tag-list { gap:8px; }
+.tag-list>span { padding:7px 10px; font-size:11px; line-height:1.4; }
+.project-section-foot>span,.project-index,.project-reading-note,.project-image-label,.project-image-coordinate,.project-visual-caption { font-size:11px; }
+.project-story { padding-block:56px; }
+.project-feature-link { align-self:flex-start; color:var(--paper-soft); transition:color 180ms ease; }
+.project-feature-link:hover,.project-feature-link:focus-visible { color:var(--violet); }
+.research-index,.discipline-index,.certificate>span:first-child { font-size:12px; }
+.research-entry h3 { font-size:20px; }
+.discipline { padding:29px 22px; }
+.discipline h3 { font-size:24px; }
+.certificate { min-height:88px; }
+.certificate h3 { font-size:17px; }
+.certificate>div>span { font-size:13px; }
+.contact-title>span,.contact-linkedin,.contact-details>span { font-size:12px; }
+.contact-details>p { font-size:16px; }
+.contact-email { font-size:19px; }
+.footer { font-size:11px; }
+
+/* Verified LinkedIn project archive. */
+.project-archive { padding-top:115px; }
+.project-archive-heading { margin-bottom:47px; display:flex; align-items:flex-end; justify-content:space-between; gap:34px; }
+.project-archive-heading>div>span,.achievements-intro>div>span { color:var(--muted); font:12px var(--mono); letter-spacing:.075em; }
+.project-archive-heading h3 { margin:17px 0 0; font:clamp(54px,8vw,94px) var(--display); line-height:.88; letter-spacing:-.045em; }
+.project-archive-heading h3 em,.achievements-intro h2 em { color:var(--violet); font-family:var(--serif); font-weight:400; font-style:italic; letter-spacing:-.065em; }
+.project-archive-heading>p { max-width:350px; margin:0 0 5px; color:var(--paper-soft); font-size:15px; line-height:1.8; }
+.project-archive-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:1px solid var(--line-fine); border-left:1px solid var(--line-fine); }
+.project-card { min-height:340px; padding:33px clamp(25px,3.1vw,43px) 29px; display:flex; flex-direction:column; border-right:1px solid var(--line-fine); border-bottom:1px solid var(--line-fine); background:linear-gradient(155deg,rgba(34,30,38,.43),rgba(18,18,21,.57)); transition:background 220ms ease; }
+.project-card:hover { background:linear-gradient(150deg,rgba(57,46,67,.44),rgba(23,21,27,.77)); }
+.project-card-meta { display:flex; justify-content:space-between; gap:15px; color:var(--paper-soft); font:10px var(--mono); letter-spacing:.035em; }
+.project-card-meta>span:last-child { flex-shrink:0; color:var(--muted); }
+.project-card h3 { max-width:495px; margin:38px 0 12px; font-size:clamp(21px,2.05vw,28px); font-weight:500; line-height:1.28; letter-spacing:-.025em; }
+.project-card-tone-1 h3 { color:var(--violet); }.project-card-tone-2 h3 { color:var(--teal); }.project-card-tone-3 h3 { color:var(--rose); }.project-card-tone-4 h3 { color:var(--blue); }
+.project-card>p { max-width:505px; margin:0 0 18px; color:var(--paper-soft); font-size:15px; line-height:1.8; }
+.project-card>.tag-list { margin-bottom:22px; }
+.project-source { margin-top:auto; align-self:flex-start; color:var(--paper-soft); font:11px var(--mono); letter-spacing:.045em; transition:color 180ms ease; }
+.project-source:hover,.project-source:focus-visible { color:var(--paper); }
+
+/* Independently verified HackNYU achievements. */
+.achievements-section { padding-block:92px 135px; }
+.achievements-intro { margin:78px 0 55px; display:flex; align-items:flex-end; justify-content:space-between; gap:40px; }
+.achievements-intro h2 { margin:17px 0 0; font:clamp(77px,11vw,144px) var(--display); line-height:.84; letter-spacing:-.045em; }
+.achievements-intro>p { max-width:355px; margin:0 0 7px; color:var(--paper-soft); font-size:16px; line-height:1.8; }
+.awards-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.award-card { min-height:365px; padding:30px clamp(24px,3.1vw,43px); display:flex; flex-direction:column; border:1px solid var(--line-fine); transition:border-color 200ms ease,transform 200ms ease; }
+.award-card:hover,.award-card:focus-visible { border-color:rgba(241,238,231,.37); transform:translateY(-3px); }
+.award-card-hedara { background:radial-gradient(ellipse 72% 64% at 87% 18%,rgba(127,112,201,.19),transparent 70%),linear-gradient(150deg,#201b26,#151318); }
+.award-card-failed { background:radial-gradient(ellipse 70% 60% at 82% 15%,rgba(99,152,139,.17),transparent 72%),linear-gradient(150deg,#18211f,#131715); }
+.award-card-top,.award-card-bottom { display:flex; justify-content:space-between; gap:12px; font:11px var(--mono); letter-spacing:.04em; }
+.award-card-top { color:var(--paper-soft); }.award-card-top>span:last-child { color:var(--muted); }
+.award-card-symbol { margin:30px 0 14px; color:var(--violet); font-size:36px; line-height:1; }.award-card-failed .award-card-symbol { color:var(--teal); }
+.award-card h3 { max-width:430px; margin:0 0 11px; font-size:clamp(24px,3vw,37px); font-weight:500; line-height:1.15; letter-spacing:-.03em; }
+.award-card>p { max-width:450px; margin:0 0 28px; color:var(--paper-soft); font-size:15px; line-height:1.75; }
+.award-card-bottom { margin-top:auto; color:var(--paper-soft); }.award-card-bottom>span:last-child { color:var(--violet); }.award-card-failed .award-card-bottom>span:last-child { color:var(--teal); }
+.achievement-proof { display:inline-block; margin-top:24px; color:var(--paper-soft); font:12px var(--mono); line-height:1.7; }
+
+@media (max-width:1080px) {
+  .masthead-contact { display:none; }
+  .impact-item>span { font-size:10px; }
+  .disciplines-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .discipline:nth-child(3) { border-left:0; }
+  .discipline:nth-child(n+3) { border-top:1px solid var(--line-fine); }
+  .project-card { padding-inline:25px; }
+  .project-card-meta { flex-wrap:wrap; }
+  .award-card-bottom { flex-wrap:wrap; }
+}
+
+@media (max-width:720px) {
+  body { font-size:15px; }
+  .masthead-brand>span:last-child { font-size:10px; }
+  .navigation a { font-size:16px; }
+  .cover-top,.cover-status,.cover-scroll { font-size:10px; }
+  .cover-caption>span,.cover-caption>h1,.cover-caption>p { font-size:11px; }
+  .chapter-label { font-size:10px; }
+  .manifesto-copy>p,.experience-main>p,.project-story>p,.research-entry p,.discipline>p { font-size:14px; }
+  .experience-main h3 { font-size:19px; }
+  .experience-company { font-size:13px; }
+  .impact-item>span { font-size:10px; }
+  .tag-list>span { font-size:10px; padding:6px 8px; }
+  .section-heading>p,.project-section-foot>p,.research-intro>p,.disciplines-heading>p { font-size:14px; }
+  .project-story { min-height:425px; padding:37px 25px; }
+  .project-archive { padding-top:78px; }
+  .project-archive-heading,.achievements-intro { align-items:flex-start; flex-direction:column; gap:19px; }
+  .project-archive-heading { margin-bottom:33px; }
+  .project-archive-heading>p,.achievements-intro>p { margin:0; font-size:14px; }
+  .project-archive-grid,.awards-grid,.disciplines-grid { grid-template-columns:1fr; }
+  .project-card { min-height:325px; padding:26px 21px 24px; }
+  .project-card-meta { font-size:9px; }
+  .project-card h3 { margin-top:32px; font-size:22px; }
+  .project-card>p,.award-card>p { font-size:14px; }
+  .project-source,.award-card-top,.award-card-bottom { font-size:10px; }
+  .achievements-section { padding-block:70px 91px; }
+  .achievements-intro { margin:49px 0 38px; }
+  .achievements-intro h2 { font-size:clamp(76px,16vw,112px); }
+  .award-card { min-height:335px; padding:25px 21px; }
+  .award-card h3 { font-size:27px; }
+  .achievement-proof { font-size:11px; }
+  .research-entry h3 { font-size:18px; }
+  .certificate h3 { font-size:15px; }
+  .certificate>div>span { font-size:12px; }
+  .footer,.footer>span { font-size:10px; }
+}
