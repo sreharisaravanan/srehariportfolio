@@ -292,3 +292,24 @@ body { font-size:16px; line-height:1.55; }
   .certificate>div>span { font-size:12px; }
   .footer,.footer>span { font-size:10px; }
 }
+
+/* Strong block-letter identity with clear role and location. */
+.masthead-brand { gap:12px; }
+.masthead-brand>.masthead-mark { font-size:43px; line-height:.9; }
+.masthead-brand>.masthead-wordmark { display:grid; gap:3px; font-family:var(--sans); letter-spacing:0; }
+.masthead-wordmark>strong { font-family:var(--display); font-size:22px; font-weight:400; line-height:1; letter-spacing:.055em; }
+.masthead-wordmark>i { display:block; font:10px var(--mono); line-height:1.2; letter-spacing:.025em; }
+.masthead-wordmark>i:first-of-type { color:var(--paper-soft); }
+
+@media (max-width:720px) {
+  .masthead-brand { gap:9px; }
+  .masthead-brand>.masthead-mark { font-size:38px; }
+  .masthead-wordmark>strong { font-size:19px; letter-spacing:.04em; }
+  .masthead-wordmark>i { font-size:8px; letter-spacing:.015em; }
+}
+
+@media (max-width:380px) {
+  .masthead-brand>.masthead-mark { font-size:33px; }
+  .masthead-wordmark>strong { font-size:17px; }
+  .masthead-wordmark>i { font-size:7.5px; }
+}
