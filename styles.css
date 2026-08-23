@@ -365,8 +365,30 @@ p {
   hyphens:auto;
 }
 
-/* The dedicated mobile wordmark keeps the desktop cover unchanged. */
-.cover-word-mobile { display:none; }
+/* One horizontal, evenly distributed wordmark across every screen size. */
+.cover-word {
+  position:absolute;
+  top:45%;
+  right:clamp(76px,11vw,150px);
+  bottom:auto;
+  left:clamp(76px,13vw,180px);
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:baseline;
+  justify-content:space-between;
+  transform:translateY(-50%);
+  z-index:1;
+}
+.cover-word>span {
+  display:block;
+  flex:0 0 auto;
+  font-family:var(--display);
+  font-size:clamp(55px,9.2vw,126px);
+  line-height:.9;
+  letter-spacing:0;
+  transform:none;
+}
 
 /* Mobile cover: explicit grid placement prevents overlapping content. */
 @media (max-width:720px) {
@@ -410,8 +432,7 @@ p {
   .cover-side {
     display:none;
   }
-  .cover-word { display:none; }
-  .cover-word-mobile {
+  .cover-word {
     position:relative;
     inset:auto;
     grid-column:1/-1;
@@ -426,7 +447,7 @@ p {
     justify-content:space-between;
     transform:none;
   }
-  .cover-word-mobile>span {
+  .cover-word>span {
     display:block;
     flex:0 0 auto;
     font-family:var(--display);
@@ -494,7 +515,7 @@ p {
 
 @media (max-width:390px) {
   .cover { column-gap:10px; }
-  .cover-word-mobile>span { font-size:clamp(41px,12.5vw,50px); }
+  .cover-word>span { font-size:clamp(41px,12.5vw,50px); }
   .cover-caption { margin-top:30px; }
   .cover-caption>p { font-size:13.5px; }
   .cover-status,.cover-scroll { font-size:8px; }
@@ -506,7 +527,7 @@ p {
     grid-template-rows:auto minmax(104px,.72fr) auto minmax(52px,1fr) auto auto;
   }
   .cover-top { font-size:8px; }
-  .cover-word-mobile>span { font-size:40px; }
+  .cover-word>span { font-size:40px; }
   .cover-caption>h1 { font-size:18px; }
   .cover-caption>p { font-size:13px; }
   .cover-status { grid-column:1/-1; grid-row:5; }
