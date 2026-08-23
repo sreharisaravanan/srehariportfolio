@@ -357,6 +357,17 @@ html { scrollbar-width:thin; scrollbar-color:rgba(174,161,239,.48) rgba(17,16,18
   .project-card:hover,.award-card:hover,.award-card:focus-visible { transform:none !important; }
 }
 
+/* Consistent editorial alignment throughout the portfolio. */
+p {
+  text-align:justify;
+  text-justify:inter-word;
+  -webkit-hyphens:auto;
+  hyphens:auto;
+}
+
+/* The dedicated mobile wordmark keeps the desktop cover unchanged. */
+.cover-word-mobile { display:none; }
+
 /* Mobile cover: explicit grid placement prevents overlapping content. */
 @media (max-width:720px) {
   .cover {
@@ -399,25 +410,29 @@ html { scrollbar-width:thin; scrollbar-color:rgba(174,161,239,.48) rgba(17,16,18
   .cover-side {
     display:none;
   }
-  .cover-word {
+  .cover-word { display:none; }
+  .cover-word-mobile {
     position:relative;
     inset:auto;
     grid-column:1/-1;
     grid-row:2;
     align-self:end;
+    width:100%;
+    max-width:420px;
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
     align-items:baseline;
-    justify-content:flex-start;
+    justify-content:space-between;
     transform:none;
   }
-  .cover-word>span {
+  .cover-word-mobile>span {
     display:block;
     flex:0 0 auto;
-    font-size:clamp(49px,15.6vw,72px);
+    font-family:var(--display);
+    font-size:clamp(43px,13.6vw,62px);
     line-height:.9;
-    letter-spacing:-.075em;
+    letter-spacing:0;
     transform:none;
   }
   .cover-caption {
@@ -479,7 +494,7 @@ html { scrollbar-width:thin; scrollbar-color:rgba(174,161,239,.48) rgba(17,16,18
 
 @media (max-width:390px) {
   .cover { column-gap:10px; }
-  .cover-word>span { font-size:clamp(46px,14.8vw,59px); }
+  .cover-word-mobile>span { font-size:clamp(41px,12.5vw,50px); }
   .cover-caption { margin-top:30px; }
   .cover-caption>p { font-size:13.5px; }
   .cover-status,.cover-scroll { font-size:8px; }
@@ -491,7 +506,7 @@ html { scrollbar-width:thin; scrollbar-color:rgba(174,161,239,.48) rgba(17,16,18
     grid-template-rows:auto minmax(104px,.72fr) auto minmax(52px,1fr) auto auto;
   }
   .cover-top { font-size:8px; }
-  .cover-word>span { font-size:44px; }
+  .cover-word-mobile>span { font-size:40px; }
   .cover-caption>h1 { font-size:18px; }
   .cover-caption>p { font-size:13px; }
   .cover-status { grid-column:1/-1; grid-row:5; }
