@@ -21,6 +21,17 @@
       });
     });
   }
+  if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
+    document.querySelectorAll(".editorial-project").forEach(function (card) {
+      card.addEventListener("pointermove", function (event) {
+        var visual = card.querySelector(".project-visual");
+        if (!visual) return;
+        var bounds = visual.getBoundingClientRect();
+        visual.style.setProperty("--spot-x", String(event.clientX - bounds.left) + "px");
+        visual.style.setProperty("--spot-y", String(event.clientY - bounds.top) + "px");
+      }, { passive: true });
+    });
+  }
   if (!reduceMotion && "IntersectionObserver" in window) {
     document.documentElement.classList.add("js-enhanced");
     var observer = new IntersectionObserver(function (entries) {
